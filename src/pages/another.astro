@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Counter } from "../components/Counter/Counter";
+---
+
+<Layout title="Another page">
+  <main>
+    <Counter client:load>
+      <h1>Hello, React from Another page!</h1>
+    </Counter>
+  </main>
+</Layout>
+
+
+<style>
+    main {
+        color: white;
+    }
+</style>
