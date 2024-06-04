@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import { Counter } from "../components/Counter/Counter";
+import { Todos } from "../components/Todos";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Astro." client:load>
 	<main>
 		<svg
 			class="astro-a"
@@ -65,6 +66,8 @@ import { Counter } from "../components/Counter/Counter";
 		<Counter client:load>
 			<b>Hello, React from Index page!</b>
 		</Counter>
+
+		<Todos client:visible />
 	</main>
 </Layout>
 

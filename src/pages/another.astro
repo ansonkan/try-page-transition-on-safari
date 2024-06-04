@@ -1,13 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Counter } from "../components/Counter/Counter";
+import { Todos } from "../components/Todos";
 ---
 
-<Layout title="Another page">
+<Layout title="Another page" client:load>
   <main>
     <Counter client:load>
       <h1>Hello, React from Another page!</h1>
     </Counter>
+
+    <Todos client:visible />
   </main>
 </Layout>
 
